@@ -1,0 +1,17 @@
+html{
+    --DarkModeElements: hsl(209, 23%, 22%);
+    --DarkModeBackground: hsl(207, 26%, 17%);
+    --DarkLightModeText: hsl(200, 15%, 8%);
+    --DarkLightModeInput: hsl(0, 0%, 52%);
+    --LightModeBackground: hsl(0, 0%, 98%);
+    --LightModeElements: hsl(0, 0%, 100%);
+}
+
+html[data-theme="dark"] {
+    --DarkModeElements: hsl(0, 0%, 100%);
+    --DarkModeBackground: hsl(0, 0%, 95%);
+    --DarkLightModeText: hsl(0, 0%, 52%);
+    --DarkLightModeInput: hsl(209, 23%, 22%);
+    --LightModeBackground: hsl(207, 26%, 17%);
+    --LightModeElements: hsl(200, 15%, 8%);
+}

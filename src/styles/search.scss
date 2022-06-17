@@ -1,0 +1,156 @@
+@import './global.scss';
+
+.search{
+    width: 100%;
+    height: 26vh;
+    background-color: var(--DarkModeBackground);
+    padding: 15px 10px;
+    
+    &-form{
+        max-width: 500px;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        &-top{
+            width: 100%;
+            height: 40px;
+            background-color: var(--DarkModeElements);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 20px;
+            &-icon{
+                color: var(--LightModeBackground);
+                // size: 3rem;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            & input{
+                background-color: transparent;
+                margin-left: 8px;
+                border: none;
+                width: 90%;
+                height: 80%;
+                color: var(--LightModeBackground);
+                font-size: 1.3rem;
+            }
+            & input:focus{
+                outline: none;
+            }
+            & input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: var(--DarkLightModeInput);
+                opacity: 1; /* Firefox */
+            }
+        }
+        &-bottom{
+            background-color: var(--DarkModeElements);
+            position: relative;
+            height: 4rem;
+            width: 60%;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            max-width: 200px;
+            & a{
+                color: var(--LightModeElements);
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+            &-icon{
+                width: 1.5rem;
+                height: 1.5rem;
+                color: var(--LightModeElements);
+            }
+            &-ul{
+                position: absolute;
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--DarkModeElements);
+                padding: 1rem;
+                align-items: flex-start;
+                justify-content: center;
+                // pad
+                left: 0;
+                top: 5rem;
+                list-style: none;
+                // display: none;
+                & li{
+                    height: 20px;
+                    color: var(--LightModeElements);
+                    font-size: 1rem;
+                    
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+
+                animation: fadeOutMenu 500ms linear;
+                // animation-duration: ;
+                // animation-iteration-count: infinite;
+                // animation-timing-function: linear; 
+                /* transform: rotate(3deg); */
+                /* transform: rotate(0.3rad);/ */
+                 /* transform: rotate(3grad); */ 
+                 /* transform: rotate(.03turn);  */
+              
+                
+                @keyframes fadeOutMenu {
+                    0% { opacity: 0; }
+                    50% { opacity: 0.5; }
+                    100% { opacity: 1; }
+                }
+            }
+
+          
+
+
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .search{   
+        max-width: 620px;
+        padding: 15px 0px;
+        &-form{
+            max-width: 620px;
+            flex-direction: row;
+            align-items: center;  
+            &-top{
+                width:40%;
+            }
+            &-bottom{
+                width:40%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .search{   
+        max-width: 930px;
+        &-form{
+            max-width: 930px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .search{   
+        max-width: 1260px;
+        &-form{
+            max-width: 1260px;
+        }
+    }
+}

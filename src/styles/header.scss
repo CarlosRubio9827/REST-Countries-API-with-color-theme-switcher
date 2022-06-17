@@ -1,0 +1,34 @@
+@import './global.scss';
+
+.header{
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--DarkModeElements);
+    align-items: center;
+    & a{
+        text-decoration: none;
+        & p:nth-child(1){
+            color: var(--LightModeElements);
+            font-weight: 800;
+            font-size: 1.4rem;
+        }
+    }
+    &-mode{
+        width: 70px;
+        cursor: pointer;
+        &-theme{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-icon{
+                color: var(--LightModeElements);
+            }
+            & p:nth-child(2){
+                color: var(--LightModeBackground);
+            }
+        }
+    }
+}

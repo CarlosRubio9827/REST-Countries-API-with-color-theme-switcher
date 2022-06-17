@@ -1,0 +1,44 @@
+@import './global.scss';
+
+
+.country{
+    background-color: var(--DarkModeElements);
+    border-radius: 5px;
+    height: 30rem;
+    min-width: 280px;
+    & figure{
+        height: 50%;
+        & img{
+            height: 100%;
+            border-radius: 5px 5px 0 0px;
+            width: 100%;
+        }
+    }
+    &-info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        height: 45%;
+        justify-content: space-between;
+        & p{
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--LightModeElements);
+        }
+        & ul{
+            display: flex;
+            flex-direction: column;
+            list-style: none;    
+            height: 63%;
+            justify-content: space-between;
+            & li{
+                color: var(--LightModeBackground);
+                font-size: 1.2rem;
+                & span{
+                    color: var(--DarkLightModeInput);
+                }
+            }
+        }
+    }
+}
