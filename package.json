@@ -1,5 +1,6 @@
 {
   "name": "frontend-mentor-22",
+  "homepage": "https://github.com/CarlosRubio9827/REST-Countries-API-with-color-theme-switcher",
   "version": "1.0.0",
   "description": "![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
@@ -8,7 +9,9 @@
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
-    "start": "webpack serve --config webpack.config.dev.js"
+    "start": "webpack serve --config webpack.config.dev.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build --mode production"
   },
   "dependencies": {
     "react": "^18.1.0",
@@ -26,6 +29,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
     "node-sass": "^7.0.1",
