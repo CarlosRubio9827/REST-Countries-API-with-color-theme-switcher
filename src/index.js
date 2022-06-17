@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter,
+import {HashRouter,
     Routes,
     Route,
 } from 'react-router-dom';
@@ -12,7 +12,7 @@ const container = document.getElementById('app');
 const root = createRoot(container);
 root.render(
         
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="country" >
@@ -27,5 +27,5 @@ root.render(
                     }
                 />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );

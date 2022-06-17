@@ -10,6 +10,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    // publicPath: '/dist'
   },
   resolve: {
     extensions: [
@@ -70,21 +71,21 @@ const config = {
     }),
     new MiniCssExtractPlugin(),
   ],
-  // devServer: {
-  //   static: {
-  //     directory: path.join(__dirname, "dist"),
-  //   },
-  //   compress: true,
-  //   port: 8080,
-  //   open: true,
-  // },
-  // optimization: {
-  //   minimize: true,
-  //   minimizer: [
-  //       new CssMinimizerPlugin(),
-  //       new TerserPlugin()
-  //   ]
-  // }
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    compress: true,
+    port: 8080,
+    open: true,
+  },
+  optimization: {
+    minimize: true,
+  //   // minimizer: [
+  //   //     new CssMinimizerPlugin(),
+  //   //     new TerserPlugin()
+  //   // ]
+  }
 };
 
 module.exports = config;

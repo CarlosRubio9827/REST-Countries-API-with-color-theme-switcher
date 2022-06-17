@@ -83,8 +83,6 @@ const App =()=>{
 
     // filterByRegion()
 
-    
-
 
 
     return(

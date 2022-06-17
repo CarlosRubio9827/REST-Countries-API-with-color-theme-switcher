@@ -7,11 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm dist/bundle.js",
-    "build-dev": "webpack --mode development",
-    "build-prod": "webpack --mode production",
-    "start": "webpack serve --config webpack.config.dev.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build --mode production"
+    "build": "webpack --mode production",
+    "builddev": "webpack --mode development",
+    "start": "webpack serve --config webpack.config.dev.js"
   },
   "dependencies": {
     "react": "^18.1.0",
