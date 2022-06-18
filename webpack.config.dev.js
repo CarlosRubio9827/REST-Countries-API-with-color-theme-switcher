@@ -17,7 +17,7 @@ const config = {
         '.js', '.jsx',
     ],
     alias: {
-        Components: path.resolve(__dirname, 'src/components/'),
+        Components: path.resolve(__dirname, 'src/Components/'),
         Styles: path.resolve(__dirname, 'src/styles/'),
         Images: path.resolve(__dirname, 'src/images/'),
     }
